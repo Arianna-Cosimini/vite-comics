@@ -2,28 +2,28 @@
 export default {
     name: "AppIcon",
 
-    data(){
-        return{
-            icons:[
+    data() {
+        return {
+            icons: [
                 {
-                    img:'../../public/img/buy-comics-digital-comics.png',
-                    text:'digital comics'
+                    img: '../../public/img/buy-comics-digital-comics.png',
+                    text: 'digital comics'
                 },
                 {
-                    img:'../../public/img/buy-comics-merchandise.png',
-                    text:'dc merchandise'
+                    img: '../../public/img/buy-comics-merchandise.png',
+                    text: 'dc merchandise'
                 },
                 {
-                    img:'../../public/img/buy-comics-subscriptions.png',
-                    text:'subscription'
+                    img: '../../public/img/buy-comics-subscriptions.png',
+                    text: 'subscription'
                 },
                 {
-                    img:'../../public/img/buy-comics-shop-locator.png',
-                    text:'comic shop locator'
+                    img: '../../public/img/buy-comics-shop-locator.png',
+                    text: 'comic shop locator'
                 },
                 {
-                    img:'../../public/img/buy-dc-power-visa.svg',
-                    text:'dc power visa'
+                    img: '../../public/img/buy-dc-power-visa.svg',
+                    text: 'dc power visa'
                 },
             ]
         }
@@ -32,103 +32,66 @@ export default {
 </script>
 
 <template>
-
     <div id="icons">
 
         <div class="content-icons">
 
-            <div class="cards">
+            <div v-for="(currentIcon,index) in icons" class="cards">
                 <div class="content-card">
                     <div class="img-card">
-                        <img src="../../public/img/buy-comics-digital-comics.png" alt="">
+                        <img :src='currentIcon.img' :style="{ height: index < 4 ? '67px' : '45px' }">
                     </div>
                     <div class="text-card">
-                        Digital comics
+                        {{ currentIcon.text }}
                     </div>
                 </div>
             </div>
-            <div class="cards">
-                <div class="content-card">
-                    <div class="img-card">
-                        <img src="../../public/img/buy-comics-digital-comics.png" alt="">
-                    </div>
-                    <div class="text-card">
-                        Digital comics
-                    </div>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="content-card">
-                    <div class="img-card">
-                        <img src="../../public/img/buy-comics-digital-comics.png" alt="">
-                    </div>
-                    <div class="text-card">
-                        Digital comics
-                    </div>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="content-card">
-                    <div class="img-card">
-                        <img src="../../public/img/buy-comics-digital-comics.png" alt="">
-                    </div>
-                    <div class="text-card">
-                        comic shop locator
-                    </div>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="content-card">
-                    <div class="img-card">
-                        <img src="../../public/img/buy-comics-digital-comics.png" alt="">
-                    </div>
-                    <div class="text-card">
-                        dc merchandise
-                    </div>
-                </div>
-            </div>
+
 
         </div>
 
     </div>
-    
 </template>
 
 <style  lang="scss">
-
 @use '../styles/mixins' as *;
 @use '../styles/variables' as *;
 
 
-#icons{
+#icons {
     background-color: $PrimaryColor;
+    position: relative;
+    z-index: 1;
 }
 
-.content-icons{
+.content-icons {
     @include styleContainer;
     padding: 60px 0;
     display: flex;
     justify-content: space-evenly;
     padding-right: 50px;
 
-} 
+}
 
 
 
-.cards{
-    
-    
+.cards {
 
-    .content-card{
+display: flex;
+align-items: center;
+
+
+    .content-card {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 20px;
 
-        img{
+        .img-card {
             max-height: 67px;
         }
 
-        .text-card{
+        .text-card {
             text-transform: uppercase;
             font-size: 12px;
         }
