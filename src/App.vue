@@ -18,6 +18,7 @@ export default {
 
 <template>
   <AppNavbar></AppNavbar>
+  <AppContent></AppContent>
 </template>
 
 <style></style>

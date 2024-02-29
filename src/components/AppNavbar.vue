@@ -49,6 +49,7 @@ export default {
 @use '../styles/mixins' as *;
 
 #menu {
+    
     @include styleContainer;
 
     display: flex;
