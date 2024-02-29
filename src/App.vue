@@ -19,6 +19,7 @@ export default {
 <template>
   <AppNavbar></AppNavbar>
   <AppContent></AppContent>
+  <AppIcon></AppIcon>
 </template>
 
 <style></style>
