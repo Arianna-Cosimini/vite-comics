@@ -1,7 +1,6 @@
 <script>
 import AppNavbar from './components/AppNavbar.vue'
 import AppContent from './components/AppContent.vue';
-import AppIcon from './components/AppIcon.vue';
 import AppFooter from './components/AppFooter.vue';
 
 
@@ -9,7 +8,6 @@ export default {
   components: {
     AppNavbar,
     AppContent,
-    AppIcon,
     AppFooter
   }
 }
@@ -19,7 +17,6 @@ export default {
 <template>
   <AppNavbar></AppNavbar>
   <AppContent></AppContent>
-  <AppIcon></AppIcon>
   <AppFooter></AppFooter>
 </template>
 

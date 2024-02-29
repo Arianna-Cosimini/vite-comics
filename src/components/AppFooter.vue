@@ -1,5 +1,12 @@
 <script>
+
+import AppIcon from '../components/AppIcon.vue';
+
 export default {
+    components: {
+        AppIcon,
+        
+    },
     name: "AppFooter",
 
     data() {
@@ -59,6 +66,8 @@ export default {
 </script>
 
 <template>
+    <AppIcon></AppIcon>
+
     <footer>
         <div class="content-footer">
 
@@ -190,10 +199,12 @@ footer {
 
         background-color: transparent;
         border: 2px solid $PrimaryColor;
+
+        cursor: pointer;
     }
 
-    .text-icon{
-        span{
+    .text-icon {
+        span {
             text-transform: uppercase;
             font-size: 20px;
             font-weight: 700;
@@ -201,17 +212,15 @@ footer {
         }
     }
 
-    .icon{
+    .icon {
         display: flex;
         gap: 35px;
 
 
-        .social-icons{
+        .social-icons {
             display: flex;
             gap: 20px;
         }
     }
 }
-
-
 </style>

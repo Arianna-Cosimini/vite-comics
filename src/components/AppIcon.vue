@@ -32,11 +32,12 @@ export default {
 </script>
 
 <template>
+
     <div id="icons">
 
         <div class="content-icons">
 
-            <div v-for="(currentIcon,index) in icons" class="cards">
+            <div v-for="(currentIcon, index) in icons" class="cards">
                 <div class="content-card">
                     <div class="img-card">
                         <img :src='currentIcon.img' :style="{ height: index < 4 ? '67px' : '45px' }">
@@ -77,8 +78,8 @@ export default {
 
 .cards {
 
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 
 
     .content-card {
