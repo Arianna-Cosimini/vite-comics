@@ -20,4 +20,10 @@ export default {
   <AppFooter></AppFooter>
 </template>
 
-<style></style>
+<style>
+
+body{
+  margin: 0;
+}
+
+</style>
