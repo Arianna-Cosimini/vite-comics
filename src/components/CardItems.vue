@@ -28,15 +28,18 @@ export default {
 
 <style lang="scss">
 
-// .cards{
-//     display: flex;
-//     flex-direction: column;
-//     width: calc(100% / 6 - 20px);
-//     padding: 20px 0;
+.cards{
+    display: flex;
+    flex-direction: column;
+    
+    width: calc(100% / 6 - 20px);
+    padding: 20px 0;
 
-//     img{
-//         width: 100%;
-//     }
-// }
+    img{
+        max-height: 185px;
+        object-fit: cover;
+        width: 100%;
+    }
+}
 
 </style>

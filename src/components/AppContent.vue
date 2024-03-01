@@ -1,6 +1,12 @@
 <script>
+
+import CardItems from './CardItems.vue';
 export default {
     name: "AppContent",
+
+    components:{
+        CardItems,
+    },
     data() {
         return {
             cardList: [
@@ -95,54 +101,11 @@ export default {
     </div>
     <div id="content">
         <div class="text-content">
-            <div class="cards">
-                <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-                <h3>Catwoman</h3>
-            </div>
-            <div class="cards">
-                <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-                <h3>Catwoman</h3>
-            </div>
-            <div class="cards">
-                <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-                <h3>Catwoman</h3>
-            </div>
-            <div class="cards">
-                <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-                <h3>Catwoman</h3>
-            </div>
-            <div class="cards">
-                <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-                <h3>Catwoman</h3>
-            </div>
-            <div class="cards">
-                <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-                <h3>Catwoman</h3>
-            </div>
-            <div class="cards">
-                <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-                <h3>Catwoman</h3>
-            </div>
-            <div class="cards">
-                <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-                <h3>Catwoman</h3>
-            </div>
-            <div class="cards">
-                <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-                <h3>Catwoman</h3>
-            </div>
-            <div class="cards">
-                <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-                <h3>Catwoman</h3>
-            </div>
-            <div class="cards">
-                <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-                <h3>Catwoman</h3>
-            </div>
-            <div class="cards">
-                <img src="https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg" alt="">
-                <h3>Catwoman</h3>
-            </div>
+            <CardItems 
+                v-for="currentCard in cardList" 
+                :cardName="currentCard.series" 
+                :cardImage="currentCard.thumb"
+            ></CardItems>
 
         </div>
     </div>
@@ -153,7 +116,29 @@ export default {
 @use '../styles/variables' as *;
 
 #jumbotron {
+    min-height: 400px;
     background-image: url('../../public/img/jumbotron.jpg');
+
+    position: relative;
+
+    
+
+    button{
+        position: absolute;
+        bottom: -25px;
+        left: 320px;
+
+        
+        padding: 15px 30px;
+
+
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: $PrimaryColor;
+
+        border: 0;
+    }
 }
 #content {
     background-color: #000;
@@ -167,20 +152,13 @@ export default {
     flex-flow: row wrap;
     justify-content: space-between;
     gap: 20px;
+
+    padding: 50px 0;
+
     
 
 }
 
-.cards{
-    display: flex;
-    flex-direction: column;
-    width: calc(100% / 6 - 20px);
-    padding: 20px 0;
-
-    img{
-        width: 100%;
-    }
-}
 
 
 

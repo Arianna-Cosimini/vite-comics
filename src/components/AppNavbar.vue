@@ -48,6 +48,12 @@ export default {
 @use '../styles/variables' as *;
 @use '../styles/mixins' as *;
 
+
+nav{
+    padding: 20px 0;
+}
+
+
 #menu {
     
     @include styleContainer;
@@ -71,12 +77,14 @@ export default {
 
         li {
             text-transform: uppercase;
+            // display: flex;
+            // align-content: stretch;
 
 
             a {
                 text-decoration: none;
                 color: black;
-                padding: 20px 0;
+                padding-bottom: 60px;
 
 
                 &:hover {
