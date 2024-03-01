@@ -126,6 +126,7 @@ footer {
     background-image: url('../../public/img/footer-bg.jpg');
     background-size: cover;
     background-position: bottom;
+    
 
 }
 
@@ -133,6 +134,7 @@ footer {
     @include styleContainer;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
 
 }
@@ -141,11 +143,13 @@ footer {
     display: flex;
     gap: 50px;
     flex-wrap: wrap;
-    padding-top: 50px;
     padding-bottom: 140px;
+    padding-top: 50px;
+
 
     .footer-links {
         margin-bottom: -140px;
+        
 
         h3 {
             text-transform: uppercase;
@@ -169,7 +173,7 @@ footer {
 
 .footer-img {
     margin: -90px 0;
-    position: relative;
+    // position: relative;
     z-index: 0;
 
     img {

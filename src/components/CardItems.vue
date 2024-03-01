@@ -19,7 +19,7 @@ export default {
 
 <template>
 
-    <div class="cards">
+    <div class="iconCards">
         <img :src="cardImage" :alt="cardName">
         <h4>{{ cardName }}</h4>
     </div>
@@ -28,9 +28,10 @@ export default {
 
 <style lang="scss">
 
-.cards{
+.iconCards{
     display: flex;
     flex-direction: column;
+    align-items: center;
     
     width: calc(100% / 6 - 20px);
     padding: 20px 0;

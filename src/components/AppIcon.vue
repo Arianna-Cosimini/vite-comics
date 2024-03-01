@@ -69,7 +69,9 @@ export default {
     @include styleContainer;
     padding: 60px 0;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
+
     padding-right: 50px;
 
 }
@@ -80,6 +82,8 @@ export default {
 
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: calc(100% / 5);
 
 
     .content-card {
@@ -90,6 +94,10 @@ export default {
 
         .img-card {
             max-height: 67px;
+
+            img{
+                width: 100%;
+            }
         }
 
         .text-card {
